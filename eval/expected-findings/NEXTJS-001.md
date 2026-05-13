@@ -1,4 +1,4 @@
-# NEXTJS-001: Secret Exposed Through `NEXT_PUBLIC_`
+# NEXTJS-001: Secret Exposed Through NEXT_PUBLIC_
 
 ## Branch
 
@@ -6,7 +6,7 @@
 
 ## Category
 
-Secrets Management
+Configuration / Secrets Management
 
 ## Severity
 
@@ -14,15 +14,15 @@ High
 
 ## Expected Finding
 
-A server-only secret is exposed via an environment variable prefixed with `NEXT_PUBLIC_`, which makes it available in browser bundles.
+A value intended to stay server-side is defined with the `NEXT_PUBLIC_` prefix, making it available to all browser clients.
 
 ## Expected Location
 
-`src/Web/.env.example` or `src/Web/lib/*`
+`src/Web/.env.example`
 
 ## Good Reviewer Behavior
 
-The reviewer should call out that `NEXT_PUBLIC_` variables are public and secrets must stay server-only.
+The reviewer should identify that `NEXT_PUBLIC_` values are bundled for client use and must never contain secrets.
 
 ## Do Not Require
 

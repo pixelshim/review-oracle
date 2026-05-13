@@ -1,4 +1,4 @@
-# REACT-001: `useEffect` Dependency Bug
+# REACT-001: useEffect Dependency Bug
 
 ## Branch
 
@@ -14,15 +14,15 @@ Medium
 
 ## Expected Finding
 
-A React component has an incorrect dependency array in `useEffect`, causing stale data or missed refresh behavior when inputs change.
+A React `useEffect` uses props/state values but omits one from the dependency array, resulting in stale data and missed refreshes.
 
 ## Expected Location
 
-`src/Web/components/*`
+`src/Web/components/ReportList.js`
 
 ## Good Reviewer Behavior
 
-The reviewer should identify the missing or incorrect dependency and explain runtime impact.
+The reviewer should identify the dependency mismatch and explain the runtime behavior impact.
 
 ## Do Not Require
 

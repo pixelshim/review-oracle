@@ -14,15 +14,15 @@ High
 
 ## Expected Finding
 
-The front-end hides privileged actions based on a client-side entitlement check, but the API endpoint does not enforce the equivalent authorization policy.
+The front-end hides controls using a client-side role check, but the API endpoint lacks equivalent authorization enforcement.
 
 ## Expected Location
 
-`src/Web/app/page.tsx` and `src/Api/Program.cs`
+`src/Web/app/page.js` and `src/Api/Program.cs`
 
 ## Good Reviewer Behavior
 
-The reviewer should identify that authorization must be enforced on the server and not trusted from browser-side checks.
+The reviewer should explain that UI checks are not authorization and that server-side policy enforcement is required.
 
 ## Do Not Require
 

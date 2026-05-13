@@ -22,7 +22,7 @@ The ASP.NET Core API accepts JWTs without validating the expected audience. Issu
 
 ## Good Reviewer Behavior
 
-The reviewer should call out that the API must validate the token audience and should not rely only on issuer validation.
+The reviewer should call out that the API must validate token audience and must not rely only on issuer validation.
 
 ## Do Not Require
 
